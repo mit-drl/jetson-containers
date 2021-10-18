@@ -91,6 +91,7 @@ RUN git clone --depth 1 --branch ${OPENCV_VERSION} https://github.com/opencv/ope
         -D BUILD_opencv_python2=OFF \
         -D BUILD_opencv_python3=ON \
 	   -D BUILD_opencv_java=OFF \
+        -D CMAKE_LIBRARY_PATH=${CUDA_TOOLKIT_ROOT_DIR}/lib64/stubs \
         -D CMAKE_BUILD_TYPE=RELEASE \
         -D CMAKE_INSTALL_PREFIX=/usr/local \
         -D CUDA_ARCH_BIN=5.3,6.2,7.2 \
